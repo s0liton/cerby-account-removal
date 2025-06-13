@@ -1,6 +1,7 @@
 import requests
 import os
 import time
+import emoji
 
 ACCESS_TOKEN = None
 CERBY_SUBDOMAIN = None
