@@ -52,7 +52,7 @@ def remove_account(account_id, access_token, cerby_subdomain):
         elif response.status_code == 404:
             print(f"\n{emoji.emojize(':white_question_mark:')} Account with ID {account_id} not found. Please check the account ID and try again.")
         elif response.status_code == 204 or response.status_code == 200:
-            print(f"{emoji.emojize(':check_mark_button')} {account_id} removed successfully. Status code: {response.status_code}")
+            print(f"{emoji.emojize(':check_mark_button:')} {account_id} removed successfully. Status code: {response.status_code}")
         else:
             print(f"\nFailed to remove account. Status code: {response.status_code}, Message: {response.text}")
     except requests.exceptions.RequestException as e:
