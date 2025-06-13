@@ -32,6 +32,6 @@ pip install -r requirements.txt
 1. **Provide Credentials:** Enter your access token and workspace subdomain when prompted.
 2. **Choose Input Method:**
    - **Individual Account IDs:** Enter one or more account IDs manually.
-   - **CSV File:** Use a CSV file containing a single account ID per line.
+   - **Text File:** Use a text file containing a single account ID per line.
 
 Follow the prompts to complete the account removal process.
