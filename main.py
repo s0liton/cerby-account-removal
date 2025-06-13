@@ -30,11 +30,11 @@ def set_cerby_subdomain():
 
 def set_input_method():
     global INPUT_METHOD
-    while INPUT_METHOD is None or INPUT_METHOD not in ['id', 'csv']:
-        print(f"\n{emoji.emojize(':file_folder:')} Input method (type 'id' for direct input or 'csv' for a CSV file):")
+    while INPUT_METHOD is None or INPUT_METHOD not in ['id', 'file']:
+        print(f"\n{emoji.emojize(':file_folder:')} Input method (type 'id' for direct input or 'file' for a text file):")
         INPUT_METHOD = input().strip().lower()
-        if INPUT_METHOD not in ['id', 'csv']:
-            print("\nThat's not right. Choose 'id' or 'csv'.")
+        if INPUT_METHOD not in ['id', 'file']:
+            print("\nThat's not right. Choose 'id' or 'file'.")
             INPUT_METHOD = None
 
 def is_configured():
@@ -76,18 +76,18 @@ if __name__ == "__main__":
         while True:
             account_id = input("\nEnter an account ID to remove:")
             remove_account(account_id, ACCESS_TOKEN, CERBY_SUBDOMAIN)
-    elif INPUT_METHOD == 'csv':
-        print(f"\n {emoji.emojize(':ok')} Great choice! Ensure your CSV file contains one account ID per line.")
-        csv_file_path = input("\nEnter the path to the CSV file: ")
+    elif INPUT_METHOD == 'file':
+        print(f"\n {emoji.emojize(':ok')} Great choice! Ensure your text file contains one account ID per line.")
+        file_path = input("\nEnter the path to the text file: ")
         try:
-            with open(csv_file_path, 'r') as file:
+            with open(file_path, 'r') as file:
                 for line in file:
                     account_id = line.strip()
                     if account_id:
                         remove_account(account_id, ACCESS_TOKEN, CERBY_SUBDOMAIN)
         except FileNotFoundError:
-            print(f"\nCSV file not found: {csv_file_path}")
+            print(f"\text file not found: {file_path}")
         except Exception as e:
-            print(f"\nAn error occurred while processing the CSV file: {e}")
+            print(f"\nAn error occurred while processing the text file: {e}")
     else:
-        print("\nInvalid input method. Please type 'id' or 'csv'.")
+        print("\nInvalid input method. Please type 'id' or 'file'.")
