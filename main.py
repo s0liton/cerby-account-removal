@@ -1,7 +1,5 @@
 import requests
 import os
-import sys
-import emoji
 import time
 
 ACCESS_TOKEN = None
