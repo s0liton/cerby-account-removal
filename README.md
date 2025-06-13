@@ -7,6 +7,7 @@ This tool helps you quickly remove accounts from your Cerby workspace via the Ce
 - **Access Token:** You will need a valid Cerby API access token.
 - **Subdomain:** Know the subdomain of your Cerby workspace.
 - **Python 3.8+** installed on your system.
+- **Optional - Text File** A file with one account ID per line.
 
 ## Installation
 
