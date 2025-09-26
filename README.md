@@ -29,9 +29,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. **Provide Credentials:** Enter your access token and workspace subdomain when prompted.
+1. **Change Directory** Open a terminal and move into the tool's root directory.
+2. **(Optional) Activate the VENV** If you're running in a virtual python environment, activate it.
+3. **Provide Credentials:** Enter your access token and workspace subdomain when prompted.
 2. **Choose Input Method:**
    - **Individual Account IDs:** Enter one or more account IDs manually.
-   - **Text File:** Use a text file containing a single account ID per line.
+   - **Text File:** Use a text file containing a single account ID per line, no commas.
 
 Follow the prompts to complete the account removal process.
